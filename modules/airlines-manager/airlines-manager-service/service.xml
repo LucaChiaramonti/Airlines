@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_2_0.dtd">
+
+<service-builder dependency-injector="ds" package-path="it.airlines.manager">
+	<namespace>AM</namespace>
+	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true"">-->
+	<entity local-service="true" name="Flight" remote-service="true" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="flightId" primary="true" type="long" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="departureDate" type="String" />
+		<column name="arrivalDate" type="String" />
+		<column name="departureTime" type="String" />
+		<column name="arrivalTime" type="String" />
+		<column name="departureAirport" type="String" />
+		<column name="arrivalAirport" type="String" />
+		<column name="availablePlaces" type="String" />
+		<column name="totalPlaces" type="String" />
+		<column name="duration" type="String" />
+		<column name="price" type="String" />
+	
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="flightId" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="DA_AA_DD" return-type="Collection">
+			<finder-column name="departureAirport" />
+			<finder-column name="arrivalAirport" />
+			<finder-column name="departureDate" />
+		</finder>
+
+		<!-- References -->
+
+		<reference entity="AssetEntry" package-path="com.liferay.portlet.asset" />
+		<reference entity="AssetTag" package-path="com.liferay.portlet.asset" />
+	</entity>
+		<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true"">-->
+	<entity local-service="true" name="Customer" remote-service="true" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="customerId" primary="true" type="long" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="firstName" type="String" />
+		<column name="lastName" type="String" />
+		<column name="flightId" type="String" />
+	
+
+		<!-- References -->
+
+		<reference entity="AssetEntry" package-path="com.liferay.portlet.asset" />
+		<reference entity="AssetTag" package-path="com.liferay.portlet.asset" />
+	</entity>
+</service-builder>

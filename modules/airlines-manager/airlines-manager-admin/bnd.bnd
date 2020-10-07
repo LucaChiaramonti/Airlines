@@ -1,0 +1,4 @@
+Bundle-Name: airlines-manager-admin
+Bundle-SymbolicName: it.airlines.manager.web
+Bundle-Version: 1.0.0
+Export-Package: it.airlines.manager.web.constants

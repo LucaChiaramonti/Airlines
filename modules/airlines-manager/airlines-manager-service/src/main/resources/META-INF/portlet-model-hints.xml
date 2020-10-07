@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="it.airlines.manager.model.Customer">
+		<field name="uuid" type="String" />
+		<field name="customerId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="firstName" type="String" />
+		<field name="lastName" type="String" />
+		<field name="flightId" type="String" />
+	</model>
+	<model name="it.airlines.manager.model.Flight">
+		<field name="uuid" type="String" />
+		<field name="flightId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="departureDate" type="String" />
+		<field name="arrivalDate" type="String" />
+		<field name="departureTime" type="String" />
+		<field name="arrivalTime" type="String" />
+		<field name="departureAirport" type="String" />
+		<field name="arrivalAirport" type="String" />
+		<field name="availablePlaces" type="String" />
+		<field name="totalPlaces" type="String" />
+		<field name="duration" type="String" />
+		<field name="price" type="String" />
+	</model>
+</model-hints>
