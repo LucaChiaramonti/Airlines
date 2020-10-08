@@ -1,0 +1,4 @@
+Bundle-Name: airlines-manager-customer-web
+Bundle-SymbolicName: it.airlines.manager.customer.web
+Bundle-Version: 1.0.0
+Export-Package: it.airlines.manager.customer.web.constants

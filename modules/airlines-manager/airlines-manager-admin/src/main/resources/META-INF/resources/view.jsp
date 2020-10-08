@@ -1,9 +1,5 @@
 <%@ include file="/init.jsp" %>
 
-<p>
-	<b><liferay-ui:message key="airlinesmanageradmin.caption"/></b>
-</p>
-
 <portlet:actionURL name="addFlight" var="addFlightURL"/>
 
 <aui:form action="<%=addFlightURL%>" name="fm">
